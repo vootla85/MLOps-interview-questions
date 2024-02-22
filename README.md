@@ -50,10 +50,37 @@ One more disadvantage is come and office words both assigned by the value 1 but 
 So, there is no weightage for context.
 
 TFIDF-  tf means term frequency, IDF means Inverse document frequency
- it is a measure, used in the fields of information retrieval (IR) and machine learning, that can quantify the importance or relevance of string representations (words, phrases, lemmas, etc)  in a document amongst a collection of documents (also known as a corpus). 
- or
+the frequency of the word in each document in the corpus. It is the ratio of number of times the word appears in a document compared to the total number of words in that document. It increases as the number of occurrences of that word within the document increases. Each document has its own tf.
  
-handy metric for determining how important a term is in a document.
+Inverse Data Frequency (idf): used to calculate the weight of rare words across all documents in the corpus. The words that occur rarely in the corpus have a high IDF score. It is given by the equation below.
+ 
+Combining these two we come up with the TF-IDF score (w) for a word in a document in the corpus. It is the product of tf and idf:
+  
+Example:
+S1: good boy
+S2: good girl
+S3:boy girl good.
+
+                                TF= No of repetition of words in sentence/No of words in sentence.
+								
+	    S1	S2	S3
+good	1/2	1/2	1/3
+Boy	    1/2	0	1/3
+girl	0	½	1/3
+
+                                       IDF=log(No of sentence/No of sentence containing words)
+words	IDF
+Good	Log(3/3)=0
+Boy	Log(3/2)
+girl	Log(3/2)
+                                                   TF*IDF
+												   
+	F1	           F2	            F3	        O/P
+	Good	      Boy        	   Girl	
+S1	½*0=0	    ½*Log(3/2)	    0*Log(3/2)	    0,0.088,0
+S2	½*0=0	    0*Log(3/2)	    ½*log(3/2)	    0,0,0.088
+S3	1/3*0=0 	1/3*Log(3/2)	1/3*log(3/2)	0,0.058.0.058
+
 
 Three main application of TFIDF are
  1)information retrieval
