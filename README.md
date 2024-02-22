@@ -99,3 +99,25 @@ TF-IDF also has use cases in the field of information retrieval, with one common
 Using TF-IDF in text summarization & keyword extraction
 Since TF-IDF weights words based on relevance, one can use this technique to determine that the words with the highest relevance are the most important. This can be used to help summarize articles more efficiently or to simply determine keywords (or even tags) for a document.
 
+what is word embbedding?
+word embbedding is mathematical representation of text.
+In NLP model - there dont understand the text so we need to represent the text as numbers.
+There are several methods to represent text as a number
+1) one hot encoding : In this representation we create one vector as no of words you have in vocabulary, fill everey word with 0 except word which your are trying to represent as 1.
+   example
+   I	You	Bag	Apple	cat	Dog
+   
+   0	0	1	0	0	0
+
+Vector representation is long based up on the vocabulary.
+
+
+2) count based representation:
+   1) bag of words
+   2) N-gram or 2-gram: similar to bag of words but we take  gorup of n words and count there occurance in a sentence.
+   3) TFIDF
+
+   
+3) Embeddings:
+   
+
