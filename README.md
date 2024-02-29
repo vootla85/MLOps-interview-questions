@@ -1,6 +1,18 @@
 # MLOps-interview-questions
 Uvicorn- It is a local server to run fast api.
 
+Gunicorn :
+Gunicorn is mainly an application server using the WSGI standard.
+
+Gunicorn supports working as a process manager and allowing users to tell it which specific worker process class to use. Then Gunicorn would start one or more worker processes using that class.
+
+Gunicorn would act as a process manager, listening on the port and the IP. And it would transmit the communication to the worker processes running the Uvicorn class.
+And then the Gunicorn-compatible Uvicorn worker class would be in charge of converting the data sent by Gunicorn to the ASGI standard for FastAPI to use it.
+Gunicorn (or also Uvicorn) as a process manager with Uvicorn workers to take advantage of multi-core CPUs, to run multiple processes in parallel.
+
+Uvicorn's capabilities for handling worker processes are more limited than Gunicorn's.
+
+
 stemming - It use fixed rules such as remove able,ing, es,s, etc to derive a base word
    for example sleeping - sleep
                ablilty -abli in this case abli doesn't make sense to base word.
@@ -150,7 +162,7 @@ Let consider bad and Apple
 Cosine simialary is also to find the similarity between  two vector
 
 Custom embedding:
-Text     Embedding Layer       Core Model        Model Out Put
+Text   --->Embedding Layer ------>  Core Model ----->   Model Out Put
 
 Word2vec:
 There are 2 different approaches for word2vec:
