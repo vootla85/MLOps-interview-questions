@@ -1,5 +1,5 @@
 # MLOps-interview-questions
-Uvicorn- It is a local server to install fast api.
+Uvicorn- It is a local server to run fast api.
 
 stemming - It use fixed rules such as remove able,ing, es,s, etc to derive a base word
    for example sleeping - sleep
@@ -119,5 +119,70 @@ Vector representation is long based up on the vocabulary.
 
    
 3) Embeddings:
+   Embeddings :It represent the word in a dense vector, while making sure that similar words are close to each other in the embedding space.
+
+What is dense vector ?
+Vector representing the word does not mostly consists of zeros.
+Similar words
+Example:
+Apple  is a fruit.
+Apple is a mobile brand.
+Tea and Pea almost near .
+
+What is embedding space?
+Where your embedding data lives.
+Different types of embedding are 
+1)	Mathematical embedding
+2)	One – dimensional embeddings
+3)	Two -dimensional embeddings
+4)	Three- dimensional embeddings
+For example:
+I   you   He    Late    Never   Bag   Wizard    Apple   cat   dog
+2   11     3     7     13        5      18         8     20    23
+
+Suppose these are the mathematical or one dimensional representation of word embedding, then
+      I     HE         Bag        Late  Apple              You
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+1     2     3     4     5     6     7     8     9     10    11    12    13    14
+
+Let consider bad and Apple 
+8-5=3 is  the similarity between these two data points
+Cosine simialary is also to find the similarity between  two vector
+
+Custom embedding:
+Text     Embedding Layer       Core Model        Model Out Put
+
+Word2vec:
+There are 2 different approaches for word2vec:
+1)	continuous Bag-of-words:
+2)	Skip-gram
+For Example:
+I wish none of this has happened. So do all who live to see such times. But that  is not up to us to decide.
+
+I   
+        ---->   Wish       In continuous bag of words  we need guess middle word.
+
+ None
+                I
+Wish      ---->             In skip-gram we guess surrounding  words
+                None
+
+Glove stands for global vector:
+Fast Text
+ELMo.
+
+CPU is central processing Unit.
+1)	It handles main processing function of a computer
+2)	Core count -2-64 
+3)	Runs processes serially
+4)	Better at processing one big task at a time
+
+GPU is Graphics processing Unit.
+1)	Handles graphic and video rendering
+2)	Core count- thousands
+3)	Runs processes in parallel
+4)	Better at processing several smaller tasks at a time.
+
+
    
 
